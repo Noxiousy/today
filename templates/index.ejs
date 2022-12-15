@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today Is</title>
+</head>
+<body>
+    <h1>Today Is</h1>
+    <fieldset id = "info">
+        <form method = "post" action = "/today">
+            <label for = "name">What's your name?</label>
+            <input type = "text" name = "name" id = "name">
+            <label for = "birthday">When's your birthday?</label>
+            <input type = "date" name = "birthday" id = "birthday">
+            <button onclick = "randomDate()">Or generate a random date because you think your birthday is too much information to provide to a final project database...</button>
+            <button type = "submit">Submit</button>
+        </form>
+    </fieldset>
+</body>
+</html>
