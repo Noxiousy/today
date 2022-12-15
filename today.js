@@ -3,21 +3,13 @@ const path = require("path");
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
+const port = process.env.PORT || 1729;
 
 stdin.setEncoding("utf-8");
 app.set("views", path.resolve(__dirname, "templates"));
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended:false}));
 
-// check for a port number
-if (argv.length != 3)
-{
-    stdout.write("Usage: node summerCampServer.js PORT_NUMBER_HERE");
-    exit(0);
-}
-
-const port = argv[2];
- 
 //  render index.ejs
 app.get("/", (req, res) => {
     res.render("index");
